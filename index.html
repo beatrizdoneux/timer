@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e3a421a94.js" crossorigin="anonymous"></script>
     <script src="./script.js" defer></script>
 </head>
+
 <body>
-    <h1>Hi, I'm a timer!</h1>
-    <p>Still under construction though...</p>
+    <div class="wrapper">
+
+        <main>
+            <div class="timer-container">
+                <p id="display"></p>
+                <p id="message"></p>
+                <div class="timer-controls-container">
+                    <button id="start" aria-label="start" class="timer-control"><i class="fa-solid fa-play"
+                            aria-hidden="true"></i></button>
+                    <button id="pause" aria-label="pause" class="timer-control"><i class="fa-solid fa-pause"
+                            aria-hidden="true"></i></button>
+                    <button id="reset" aria-label="reset" class="timer-control"><i class="fa-solid fa-rotate-right"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="controls-container">
+                <div id="sliders-container">
+                    <div class="choice-display">
+                        <h2>Session</h2>
+                        <input id="session-slider" type="range" min="1" max="60" value="25" />
+                        <p id="session-display"></p>
+                    </div>
+                    <div class="choice-display">
+                        <h2>Break</h2>
+                        <input id="break-slider" type="range" min="0" max="60" value="5" />
+                        <p id="break-display"></p>
+                    </div>
+                    <div class="choice-display">
+                        <h2>Rounds</h2>
+                        <input id="rounds-slider" type="range" min="1" max="10" value="4" />
+                        <p id="rounds-display"></p>
+                    </div>
+                </div>
+                <div>
+                    <button id="restore">Restore to defaults</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Beatriz Doneux</p>
+        </footer>
+    </div>
 </body>
+
 </html>
